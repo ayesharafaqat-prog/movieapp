@@ -17,7 +17,6 @@ export default function MovieCard({ movie }) {
     return (
         <div className="movie-card">
             <div className="movieposter">
-                {/* Yahan humne TMDB ka image domain direct laga diya hai taake farzi data par bhi poster load ho sake */}
                 <img src={`https://tmdb.org{movie.poster_path}`} alt={movie.title} />
                 <div className="overlay">
                     <button className={`favorite-btn ${favorite ? 'active' : ''}`} onClick={onFavoriteClick}>
