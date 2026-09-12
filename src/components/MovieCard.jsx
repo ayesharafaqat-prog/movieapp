@@ -17,7 +17,10 @@ export default function MovieCard({ movie }) {
     return (
         <div className="movie-card">
             <div className="movieposter">
-                <img src={`https://tmdb.org{movie.poster_path}`} alt={movie.title} />
+              <img 
+  src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Image'} 
+  alt={movie.title} 
+/>
                 <div className="overlay">
                     <button className={`favorite-btn ${favorite ? 'active' : ''}`} onClick={onFavoriteClick}>
                         🤍

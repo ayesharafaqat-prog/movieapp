@@ -219,3 +219,34 @@ body {
   color: #9ca3af;
   font-size: 1.1rem;
 }
+/* Mobile Responsiveness Fix */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .home, .favorites {
+    padding: 1rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+
+  .movie-info h3 {
+    font-size: 0.95rem;
+  }
+}
